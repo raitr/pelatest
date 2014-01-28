@@ -80,6 +80,11 @@ border-bottom-left-radius: 0;
 height: 44px; 
 width: 100%; 
  }
+
+#progressbar {
+width: 300px;
+margin: 20px auto;
+}
 /* Separators
 -----------------------------------------------------------------------------------------------------------*/
 /* Field contain separator (< 28em) */
