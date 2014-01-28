@@ -1,0 +1,27 @@
+doctype html5
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/bgn.css')
+    link(rel='stylesheet', href='/stylesheets/jquery.mobile.icons.min.css')
+    link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css')
+    script(src='http://code.jquery.com/jquery-1.10.2.min.js')
+    script(src='http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/login.js')
+  body
+    div(data-role='page' data-theme="a")
+      div#header(data-role='header')
+        div#content(data-role='content' style='position: fixed; left:0 ;top: 45px ; bottom: 45px; min-width: 100%; min-height: 100%')
+            div(data-role='fieldcontain' id='login' style='display: block; top:25%; max-width: 50%; margin-left: auto; margin-right: auto; text-align: center')
+              form(method='POST' action='/login')
+                label(for='username' style='font-family:"Spy Agency"; border: hidden; margin-left: auto; margin-right: auto') Username 
+                input(type='text' id='username' name='username')
+                label(for='password' style='font-family:"Spy Agency"; border: hidden;margin-left: auto; margin-right: auto') Password
+                input(type='password' id='password' name='password')
+                //input#sendLogin(type='submit' name='submit' value='Login')
+                input(type='image', src='/images/login.png', alt='submit' value='Login' id="sendLogin" style='position: relative; padding:10px')
+                input(type='image', src='/images/newbig.png', alt='submit' value='Login' id="sendNew" style='position: relative; padding: 10px')
+                if message
+                  p #{message}
+      div#footer(data-role='footer' data-position='fixed' style='position: fixed; left: 0;bottom: 0')
+        
